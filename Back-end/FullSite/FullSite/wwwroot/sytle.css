@@ -1,0 +1,232 @@
+:root {
+  --bg-color-black: #2c3e50;
+  --bg-color-green: #1abc9c;
+}
+
+.active_nav {
+  display: block;
+}
+
+nav {
+  background-color: var(--bg-color-black);
+  width: 100%;
+  position: fixed !important;
+  z-index: 9999;
+  -webkit-transition: 0.4s all linear;
+  transition: 0.4s all linear;
+}
+
+nav .container .navbar-brand {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+nav .container .navbar-collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+nav .container .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 16px;
+  display: block;
+}
+
+main .divider {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .divider .divider_line {
+  width: 110px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+main .divider .divider_icon .fa-star {
+  font-size: 36px !important;
+  margin: 0px 15px;
+  color: white;
+}
+
+main .sectitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .sectitle h2 {
+  color: var(--bg-color-black);
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+main #head {
+  padding: 200px 0px 90px 0px;
+  background-color: var(--bg-color-green) !important;
+}
+
+main #head .container {
+  color: white;
+}
+
+main #head .container h1 {
+  font-size: 64px;
+  font-weight: 800;
+  margin: 20px 0px;
+}
+
+main #head .container p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+main #portfolio {
+  padding: 80px 0px;
+}
+
+main #portfolio .divider .divider_line {
+  background-color: var(--bg-color-black);
+}
+
+main #portfolio .divider .divider_icon .fa-star {
+  color: var(--bg-color-black);
+}
+
+main #about {
+  padding: 90px 0px;
+  background-color: var(--bg-color-green);
+}
+
+main #about .sectitle h2 {
+  color: white;
+}
+
+main #about .container {
+  color: white;
+}
+
+main #contact {
+  padding: 90px 0px;
+}
+
+main #contact .divider .divider_line {
+  background-color: var(--bg-color-black);
+}
+
+main #contact .divider .divider_icon .fa-star {
+  color: var(--bg-color-black);
+}
+
+main #contact .btn {
+  background-color: var(--bg-color-green);
+  font-size: 26px;
+  color: white;
+}
+
+.footer {
+  background-color: var(--bg-color-black);
+  color: white;
+  padding: 80px 0px;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.copyright {
+  background-color: #1a252f;
+}
+
+@media (max-width: 992px) {
+  nav {
+    background-color: var(--bg-color-black) !important;
+    padding: 24px 0px !important;
+    width: 100%;
+    position: fixed !important;
+    z-index: 9999;
+  }
+  nav .container .navbar-brand {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  nav .container button {
+    background-color: var(--bg-color-green);
+  }
+  nav .container button span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+  }
+  nav .container .navbar-collapse {
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav .container .navbar-collapse .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px;
+  }
+  main #head .container h1 {
+    font-size: 34px;
+  }
+  main #head .container p {
+    font-size: 14px;
+  }
+  main #head .divider {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #head .divider .divider_line {
+    width: 90px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50px;
+  }
+  main .divider_icon .fa-star {
+    font-size: 26px !important;
+    margin: 0px 11px;
+    color: white;
+  }
+  .sectitle h2 {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=sytle.css.map */
