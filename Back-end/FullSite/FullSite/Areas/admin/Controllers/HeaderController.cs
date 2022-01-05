@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.IO;
+using System.Linq;
 
 namespace FullSite.Areas.admin.Controllers
 {
@@ -25,33 +26,33 @@ namespace FullSite.Areas.admin.Controllers
 
         public IActionResult Update()
         {
-            return View();
+            return View(_context.Mains.FirstOrDefault());
         }
 
         [HttpPost]
         public IActionResult Update(Main model)
         {
 
-            //if (model.ImageFile != null)
-            //{
-            //    string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads", model.Profile);
-            //    if (System.IO.File.Exists(oldImagePath))
-            //    {
-            //        System.IO.File.Delete(oldImagePath);
-            //    }
+            if (model.ImageFile != null)
+            {
+                string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads", model.Profile);
+                if (System.IO.File.Exists(oldImagePath))
+                {
+                    System.IO.File.Delete(oldImagePath);
+                }
 
-            //    string fileName = Guid.NewGuid() + "" + model.ImageFile.FileName;
-            //    string filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads", fileName);
+                string fileName = Guid.NewGuid() + "" + model.ImageFile.FileName;
+                string filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads", fileName);
 
-            //    using (var stream = new FileStream(filePath, FileMode.Create))
-            //    {
-            //        model.ImageFile.CopyTo(stream);
-            //    }
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    model.ImageFile.CopyTo(stream);
+                }
 
-            //    model.Profile = fileName;
+                model.Profile = fileName;
 
 
-            //}
+            }
             _context.Mains.Update(model);
             _context.SaveChanges();
 

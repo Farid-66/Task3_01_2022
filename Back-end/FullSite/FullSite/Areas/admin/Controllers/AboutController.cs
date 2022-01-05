@@ -1,6 +1,7 @@
 ﻿using FullSite.Data;
 using FullSite.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace FullSite.Areas.admin.Controllers
 {
@@ -21,7 +22,7 @@ namespace FullSite.Areas.admin.Controllers
 
         public IActionResult Update()
         {
-            return View();
+            return View(_context.Mains.FirstOrDefault());
         }
 
 

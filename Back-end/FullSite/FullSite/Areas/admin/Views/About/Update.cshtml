@@ -12,10 +12,13 @@
                     <label asp-for="@Model.About" class="form-label">
                         Content
                     </label>
-                    <textarea class="form-control" asp-for="@Model.About" rows="3"></textarea>
+                    <textarea class="form-control" asp-for="@Model.About"  rows="20"></textarea>
                 </div>
 
                 <input asp-for="@Model.ID" hidden />
+                <input asp-for="@Model.Title" hidden />
+                <input asp-for="@Model.Substring" hidden />
+                <input asp-for="@Model.Profile" hidden />
                 <div class="btns mb-4">
                     <button type="submit" class="btn btn-warning btn-circle" title="Edit">
                         <i class="far fa-edit"></i>
