@@ -45,7 +45,7 @@ namespace FullSite.Areas.admin.Controllers
             _context.Portfolios.Add(model);
             _context.SaveChanges();
 
-            return Redirect("../Home/Index");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Update(int? id)
@@ -80,7 +80,7 @@ namespace FullSite.Areas.admin.Controllers
             _context.Portfolios.Update(model);
             _context.SaveChanges();
 
-            return Redirect("../Home/Index");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Delete(int? id)
@@ -95,7 +95,7 @@ namespace FullSite.Areas.admin.Controllers
             _context.Portfolios.Remove(portfolio);
             _context.SaveChanges();
 
-            return Redirect("../Home/Index");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

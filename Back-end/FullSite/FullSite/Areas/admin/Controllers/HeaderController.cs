@@ -56,7 +56,7 @@ namespace FullSite.Areas.admin.Controllers
             _context.Mains.Update(model);
             _context.SaveChanges();
 
-            return Redirect("../Home/Index");
+            return RedirectToAction("Index", "Home");
         }
     }
 }
